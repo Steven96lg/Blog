@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+const posts = await getCollection('posts');
+---
+<div class="blog-posts">
+  {posts.map((post) => (
+    <article>
+      <img src={post.data.image} alt={post.data.title} />
+      <div class="tags-date">
+        <span class="tag-post">{post.data.tag}</span>
+        <span>{new Date(post.data.pubDate).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+      </div>
+      <a href={`/post/${post.slug}`}>{post.data.title}</a>
+      <p>{post.data.description}</p>
+    </article>
+  ))}
+</div>
+
+<style>
+    .blog-posts{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blog-posts .tags-date{
+        display: flex;
+        justify-content: space-around;
+        padding: 0 12px;
+        font-family: "Archivo Narrow", sans-serif;
+        font-size: 1rem;
+        color: #888;
+        margin-top: 0.9rem;
+        & .tag-post{
+            background-color: black;
+            color: white;
+            padding: 0 10px;
+            display: inline-block;
+        }
+    }
+
+    .blog-posts article{
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-posts article img{
+        width: 360px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .blog-posts article a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 1.2rem;
+        display: block;
+        margin-top: 0.7rem;
+        padding: 0 12px;
+        transition: all 0.3s ease;
+    }
+
+    .blog-posts article a:hover{
+        color: white;
+        background-color: black;
+    }
+
+    .blog-posts article p{
+        padding: 0 12px;
+        text-align: center;
+        color: #555;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+</style>
