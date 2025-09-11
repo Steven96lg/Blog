@@ -3,7 +3,7 @@ title: 'La importancia de las bases en programación 🧩'
 pubDate: 2025-09-08
 description: '¿Qué tanta importancia le das a tus bases en programación? 💻 En estos tiempos de IA 🤖 y Vibe Coding, tus fundamentos importan más que nunca. Por eso, en este artículo quiero compartirte mi opinión sobre el tema.'
 tag: "Fundamentos" 
-image: 'https://i0.wp.com/www.returngis.net/wp-content/uploads/2025/06/Crear-un-MCP-Server-con-Streamable-HTTP-usando-Low-Level-server-scaled.png?resize=825%2C550&ssl=1'
+image: './fundamentos-de-programacion.png'
 ---
 
 Ultimamente me he encontrado en diferentes redes opiniones respecto a que los días de los programadores estan contados gracias a la IA. y que con Vibe Coding ya no se necesita saber programar para crear software.

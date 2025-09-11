@@ -1,61 +1,101 @@
 
 <nav>
-	<a href="/" class="home-redirect">stevenlayna</a>
-	<div class="search-bar">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M18.319 14.433A8.001 8.001 0 0 0 6.343 3.868a8 8 0 0 0 10.564 11.976l.043.045l4.242 4.243a1 1 0 1 0 1.415-1.415l-4.243-4.242zm-2.076-9.15a6 6 0 1 1-8.485 8.485a6 6 0 0 1 8.485-8.485" clip-rule="evenodd"/></svg>
-        <input type="text" class="search-bar" placeholder="Buscar" />
+	<div class="logo">
+        <a href="/" class="home-redirect"><img src="logo.png" alt="">DeV</a>
+    </div>
+	<div class="center-nav">
+        <div class="search-bar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M18.319 14.433A8.001 8.001 0 0 0 6.343 3.868a8 8 0 0 0 10.564 11.976l.043.045l4.242 4.243a1 1 0 1 0 1.415-1.415l-4.243-4.242zm-2.076-9.15a6 6 0 1 1-8.485 8.485a6 6 0 0 1 8.485-8.485" clip-rule="evenodd"/></svg>
+            <input type="text" class="search-bar" placeholder="Buscar" />
+        </div>
+    </div>
+    <div class="theme-lang">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><path fill="#000000" d="m247.15 212.42l-56-112a8 8 0 0 0-14.31 0l-21.71 43.43A88 88 0 0 1 108 126.93A103.65 103.65 0 0 0 135.69 64H160a8 8 0 0 0 0-16h-56V32a8 8 0 0 0-16 0v16H32a8 8 0 0 0 0 16h87.63A87.76 87.76 0 0 1 96 116.35a87.7 87.7 0 0 1-19-31a8 8 0 1 0-15.08 5.34A103.6 103.6 0 0 0 84 127a87.55 87.55 0 0 1-52 17a8 8 0 0 0 0 16a103.46 103.46 0 0 0 64-22.08a104.2 104.2 0 0 0 51.44 21.31l-26.6 53.19a8 8 0 0 0 14.31 7.16L148.94 192h70.11l13.79 27.58A8 8 0 0 0 240 224a8 8 0 0 0 7.15-11.58M156.94 176L184 121.89L211.05 176Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362t.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21"/></svg>
     </div>
 </nav>
 
 <style>
-    nav{
-		width: 100%;
-		height: 60px;
-		background-color: #fff;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		font-family: "Archivo Narrow", serif;
-		font-size: 1.5rem;
-		font-weight: bold;
-        position: fixed;
-        top: 0;
-		& .home-redirect{
-			margin-left: 50px;
-			padding: 0 10px 5px;
-			background-color: black;
-			color: white;
-			border-radius: 5px;
-            text-decoration: none;
-            display: block;
-		}
-		& div{
-			padding-right: 50px;
-		}
-	}
+  nav {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Archivo Narrow", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  padding: 0 50px;
+  box-sizing: border-box; 
+}
 
-    nav .search-bar {
-        width: 100%;
-        height: 28px;
-        display: flex;
-        align-items: center;
-        border: 1px solid black;
-        width: 300px;
-        margin-right: 10px;
-        padding-left: 5px;
-        border-radius: 5px;
-    }
-    nav .search-bar input {
-        width: 100%;
-        height: 26px;
-        border: none;
-        font-size: 1rem;
-        font-family: "Archivo Narrow", sans-serif;
-        color: #000000;
-        outline: none;
-    }
-    nav .search-bar input::placeholder {
-        color: black;
-    }
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+nav .logo img {
+  height: 25px;
+  width: auto;
+}
+
+nav .home-redirect {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  width: 160px;
+  font-weight: 500;
+  color: rgb(104, 104, 104);
+}
+
+nav .center-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .center-nav .search-bar {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 100%;
+  max-width: 500px;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+nav .center-nav .search-bar input {
+  width: 100%;
+  max-width: 500px;
+  height: 26px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Archivo Narrow", sans-serif;
+  color: #000000;
+  outline: none;
+}
+
+nav .search-bar input::placeholder {
+  color: black;
+}
+
+nav .theme-lang {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav .theme-lang svg {
+  cursor: pointer;
+}
+
 </style>
