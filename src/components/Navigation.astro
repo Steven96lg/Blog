@@ -6,7 +6,8 @@
 	<div class="center-nav">
         <div class="search-bar">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M18.319 14.433A8.001 8.001 0 0 0 6.343 3.868a8 8 0 0 0 10.564 11.976l.043.045l4.242 4.243a1 1 0 1 0 1.415-1.415l-4.243-4.242zm-2.076-9.15a6 6 0 1 1-8.485 8.485a6 6 0 0 1 8.485-8.485" clip-rule="evenodd"/></svg>
-            <input type="text" class="search-bar" placeholder="Buscar" />
+            <input type="text" class="search-bar-input" placeholder="Buscar" />
+            <ul class="showResults"></ul>
         </div>
     </div>
     <div class="theme-lang">
@@ -14,6 +15,44 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#000000" d="M12 21q-3.775 0-6.387-2.613T3 12q0-3.45 2.25-5.988T11 3.05q.325-.05.575.088t.4.362t.163.525t-.188.575q-.425.65-.638 1.375T11.1 7.5q0 2.25 1.575 3.825T16.5 12.9q.775 0 1.538-.225t1.362-.625q.275-.175.563-.162t.512.137q.25.125.388.375t.087.6q-.35 3.45-2.937 5.725T12 21"/></svg>
     </div>
 </nav>
+
+<script>
+  async function setupSearch() {
+    
+    const input = document.querySelector(".search-bar-input");
+    const results = document.querySelector(".showResults");
+    console.log(input);
+
+    // Carga el índice de posts
+    const res = await fetch("/search.json");
+    const posts = await res.json();
+
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase();
+      results.innerHTML = "";
+
+      if (!query) return;
+
+      const filtered = posts.filter((post) =>
+        post.title.toLowerCase().includes(query)
+      );
+
+     if(filtered.length > 0) {
+        filtered.forEach((post) => {
+          const li = document.createElement("li");
+          li.classList.add("search-item"); // clase directa
+          li.innerHTML = `<a href="${post.url}" style="text-decoration: none; color: black; font-size: 16px; font-weight: 200; display: inline-block; padding: 5px 15px;">${post.title}</a>`;
+          results.appendChild(li);
+        });
+      }else{
+        results.innerHTML = `<li style="text-decoration: none; color: black; font-size: 16px; font-weight: 200; display: inline-block; padding: 5px 15px;">No se encontraron resultados</li>`;  
+      }
+    
+    });
+  }
+
+  setupSearch();
+</script>
 
 <style>
   nav {
@@ -70,6 +109,7 @@ nav .center-nav .search-bar {
   max-width: 500px;
   padding-left: 5px;
   border-radius: 5px;
+  position: relative;
 }
 
 nav .center-nav .search-bar input {
@@ -82,6 +122,24 @@ nav .center-nav .search-bar input {
   color: #000000;
   outline: none;
 }
+
+nav .center-nav .search-bar .showResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+
 
 nav .search-bar input::placeholder {
   color: black;

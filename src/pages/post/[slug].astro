@@ -25,22 +25,17 @@ const { Content } = await entry.render();
       <h1>{entry.data.title}</h1>
       
       <!-- La imagen se maneja automáticamente -->
-      <Image 
+      <!--<Image 
         src={entry.data.image} 
         alt={entry.data.title}
         width={800}
         height={400}
         class="cover-image"
-      />
-      
+      />-->
       <div class="meta">
-        <time datetime={entry.data.pubDate.toISOString()}>
-          {entry.data.pubDate.toLocaleDateString('es-ES')}
-        </time>
+        <span class="date-post">{new Date(entry.data.pubDate).toLocaleDateString('es-MX', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
         <span class="tag">{entry.data.tag}</span>
       </div>
-      
-      <p class="description">{entry.data.description}</p>
     </header>
     
     <div class="content">
@@ -54,17 +49,18 @@ const { Content } = await entry.render();
     max-width: 800px;
     margin: 100px auto;
     padding: 0 1rem;
+    padding-bottom: 60px;
     font-family: "Archivo Narrow", serif;
   }
 
   header {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1;
   }
 
   .cover-image {
@@ -82,13 +78,18 @@ const { Content } = await entry.render();
     margin: 1rem 0;
     font-size: 0.9rem;
     color: #666;
+    & .date-post {
+      background-color: rgb(44, 146, 172);
+      color: white;
+      padding: 0.25rem 0.75rem;
+    }
   }
 
   .tag {
-    background: #e2e8f0;
+    background: black;
+    color: white;
     padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .description {
@@ -100,16 +101,23 @@ const { Content } = await entry.render();
 
   .content {
     line-height: 1.7;
+    font-family: 'Archivo Narrow', serif;
   }
 
-  .content :global(p) {
-    margin-bottom: 1.5rem;
-  }
+ 
 
   .content :global(img) {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin: 2rem 0;
+  }
+
+  .content :global(pre){
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
   }
 </style>
