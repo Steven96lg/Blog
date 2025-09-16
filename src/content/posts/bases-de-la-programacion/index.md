@@ -6,59 +6,77 @@ tag: "Fundamentos"
 image: './fundamentos-de-programacion.png'
 ---
 
-Ultimamente me he encontrado en diferentes redes opiniones respecto a que los días de los programadores estan contados debido a la IA. y que con Vibe Coding ya no se necesita saber programar para crear software, y que por esto ya no vale la pena aprender a programar.
+En los últimos meses me he encontrado con muchas opiniones en redes sociales sobre que *los días de los programadores están contados* debido a la IA. Algunos dicen que con el famoso **Vibe Coding** ya no es necesario aprender a programar para crear software.  
+Esto puede sonar abrumador, y es normal que surja el miedo de ser reemplazados por la IA o por quienes usan estas herramientas.  
 
-Esto es bastante abrumador y a muchos nos asusta el hecho de, en un futuro ser remplazados por la IA o por los famosos VibeCoders, pero crear software no es lo mismo que crear software de calidad.
+Pero aquí hay un punto clave: **crear software no es lo mismo que crear software de calidad.**  
+Y ahí es donde entran en juego las bases de la programación.  
 
-Y aqui es donde me gustaría contarte un poco mi experiencia.
+---
 
-¿Porque las bases importan? Son universales, independientemente del lenguaje de programación con el que decidas empezar o ya estes usando, una vez aprendiendo las bases lo unico que va a cambiar es la manera en la que escribes las sentencias (o sea la sintaxis).
+## ¿Por qué las bases importan?
 
-Una variable en Python, es lo mismo que una vatiable en JavaScript,
-una condicional y un bucle son lo mismo en ambos lenguajes.
+Las bases son **universales**. No importa el lenguaje de programación con el que decidas empezar o que ya estés usando: una vez las entiendes, lo único que cambia es la forma en que escribes las sentencias en cada lenguaje (la sintaxis).  
 
-¿Qué cambia? la manera en la que los escribimos.
+Por ejemplo:  
+
+- Una **variable** en Python es lo mismo que una variable en JavaScript.  
+- Un **condicional** y un **bucle** existen en ambos lenguajes.  
+- ¿Qué cambia? Solo la manera de escribirlos.  
+
+### Ejemplos en código
 
 ```javascript
-// Ejemplos en Javascript
-const myVarible = 'Soy una variable en Javascript'
+// Ejemplos en JavaScript
+const myVariable = 'Soy una variable en JavaScript'
 
-if(condicional){
-    console.log('Soy un condicional en Javascript')
+if (condicional) {
+    console.log('Soy un condicional en JavaScript')
 }
 
-for(let i = 0; i <= 10; i++){
-    console.log('Soy un bucle en Javascript')
+for (let i = 0; i <= 10; i++) {
+    console.log('Soy un bucle en JavaScript')
 }
 ```
+
 ```python
 # Ejemplos en Python
-my_varible = 'Soy una variable en Python'
+my_variable = 'Soy una variable en Python'
 
 if condicional:
     print('Soy una condicional en Python')
 
 for i in range(10):
-    print('Soy un bucle en python')
+    print('Soy un bucle en Python')
+
 ```
 
-Se escriben diferente pero sirven para lo mismo.
-- Una varible nos sirve para guardar un valor en memoria(puede ser un numero, una cadena de texto, un boolean, etc.)
-- Un condicional valida que un si el criterio es verdadero o falso.
-- Un bucle se ejecuta la cantidad de veces que se le indique o si se recorre un arreglo pues la longitud de valores del arreglo.
+Se escriben diferente pero sirven para lo mismo:
 
-Y aunque claro tambien se deben de aprender mas conceptos como:
- - funciones
- - algoritmos y estructuras de datos
- - Programación Orientada a Objetos
- - Principios Solid
+- Una variable nos sirve para guardar un valor en memoria (puede ser un número, una cadena de texto, un boolean, etc.).
+- Un condicional valida si el criterio es verdadero o falso.
+- Un bucle se ejecuta la cantidad de veces que se le indique o, si se recorre un arreglo, pues la longitud de valores del arreglo.
 
-Una vez entiendas esta pasarte a cualquier otro lenguaje sera sencillo que la unica curva de aprendizaje que deberas pasar es aprender su sintaxis.
+Y aunque claro, también se deben aprender más conceptos como:
 
-**Te cuento algo:** Mi lenguaje principal el Javascript, cuando empece en mi primer trabajo me toco usar Vue3 para diseñar eñ el front, era un framework un poco nuevo para mi, ya que yo venia de React, pero pasarme a usar Vue no fue complicado ya que las bases son las mismas incluso para los frameworks de este tipo que nos ayudan a crear componentes, ambos reciben props, ambos emiten eventos y cuentan con un ciclo de vida, la diferencia? nuevamente la sintaxis.
+- Funciones
+- Algoritmos y estructuras de datos
+- Programación Orientada a Objetos
+- Principios SOLID
 
-en mi actual cargo usamos una libreria llamada lit-element que de la misma manera nos ayuda a crear componentes reutilizables, pero con la peculiaridad de que los componentes se escriben como clases, y al igual que en Vue3 y React, estos componentes, reciben props, emiten eventos y tienen un ciclo de vida, asi que adaptarme fue secillo ya que conozco las bases.
+Una vez entiendas esto, pasarte a cualquier otro lenguaje será sencillo, ya que la única curva de aprendizaje que deberás pasar es aprender su sintaxis.
 
-y en algunos proyectos personales que he llegado a realizar cuando me estoy ayudando de alguna herramienta de IA, en ocaciones no pueden modificar algo que es relativamente sencillo, he tenido que indicar hasta 3 veces un prompt y hace cosas raras exepto lo que le pido y termino corrigiendolo yo de manera manual, ahí es donde las bases valen la pena.
+---
 
-Así que cuando escuches que ya no vale la pena aprender a programar, recuerda siempre que sin las bases no podras reparar los errores que tu asistente de IA en turno este cometiendo.
+### Te cuento algo
+
+Mi lenguaje principal es JavaScript. Cuando empecé en mi primer trabajo me tocó usar Vue3 para diseñar el front. Era un framework un poco nuevo para mí, ya que yo venía de React, pero pasarme a usar Vue no fue complicado ya que las bases son las mismas.
+
+Incluso para los frameworks de este tipo que nos ayudan a crear componentes, ambos reciben props, ambos emiten eventos y cuentan con un ciclo de vida.
+¿La diferencia? Nuevamente, la sintaxis.
+
+En mi actual cargo usamos una librería llamada LitElement que, de la misma manera, nos ayuda a crear componentes reutilizables, pero con la peculiaridad de que los componentes se escriben como clases. Y al igual que en Vue3 y React, estos componentes reciben props, emiten eventos y tienen un ciclo de vida. Así que adaptarme fue sencillo ya que conozco las bases.
+
+En algunos proyectos personales, cuando me estoy apoyando de alguna herramienta de IA, en ocasiones no pueden modificar algo que es relativamente sencillo. He tenido que indicar hasta 3 veces un prompt y hace cosas raras excepto lo que le pido, y termino corrigiéndolo yo de manera manual, ahí es donde las bases valen la pena.
+
+Así que, cuando escuches que ya no vale la pena aprender a programar, recuerda siempre que sin las bases no podrás reparar los errores que tu asistente de IA en turno esté cometiendo.
