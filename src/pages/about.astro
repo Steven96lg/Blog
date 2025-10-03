@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+---
+
+<Layout>
+    <Navigation />
+    <main>
+        <div class="general-content">
+            <p class="greeting">Hola, Soy Steven Layna.</p>
+            <p>Software Engineer (Frontend & FullStack) con mas de 3 años de experienca en el desarrollo web</p>
+            <div class="image-container">
+                 <img src="steven.jpeg" alt="">
+            </div>
+            <p></p>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main{
+        width: 800px;
+        margin: 0 auto;
+    }
+    main .general-content{
+        padding-top: 90px;
+        padding-bottom: 50px;
+        font-family: "Archivo Narrow", sans-serif;
+    }
+
+    main .general-content .greeting{
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: rgb(99, 98, 98);
+    }
+
+    main .general-content .image-container{
+        width: 100%;
+        height: 450px;
+        overflow: hidden;
+
+        margin-bottom: 1rem;
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+</style>

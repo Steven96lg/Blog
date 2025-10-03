@@ -1,7 +1,7 @@
 ---
-title: 'MCP Server en VSCode'
+title: 'MCP Server en VSCode 🤖'
 pubDate: 2025-09-08
-description: '¿Qué tanta importancia le das a tus bases en programación? 💻 En estos tiempos de IA 🤖 y Vibe Coding, tus fundamentos importan más que nunca. Por eso, en este artículo quiero compartirte mi opinión sobre el tema.'
+description: 'En mi experiencia, Copilot ayuda muchísimo… pero cuando le conectas MCP Servers las posibilidades se amplían 🚀. Hoy te explicaré qué son, cómo instalarlos en VS Code y cómo los uso para hacer mi flujo de trabajo más eficiente. 🤖'
 tag: "Inteligencia Artificial" 
 image: './mcp-vscode.png'
 ---
