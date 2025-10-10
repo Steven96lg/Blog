@@ -3,6 +3,9 @@
 ## [Unreleased]
 
 ### Features
+- **(2025-10-05)**: Actualizaciones recientes
+  - Se elimino el aside del blog para solo mantener los post en la pagina principal.
+  - Se elimino el post algoritmos en programación
 - **(2025-10-04)**: Documentación y seguimiento de cambios.
   - Se ha creado el archivo `CHANGELOG.md` para llevar un registro de los cambios en el proyecto.
   - Se ha añadido una descripción al archivo `README.md` para explicar el propósito del repositorio.
@@ -19,3 +22,7 @@
 - **(2025-09-09)**: Se agrego el primer articulo más el enlace a las redes sociales en el panelside
 - **(2025-09-08)**: Se agrego el diseño de la pagina principal y las paginas de la lectura de los blogs
 - **(2025-09-07)**: Initial commit from Astro
+
+### Proximos pasos.
+
+- agregar el contador de visitas a la pagina principal
