@@ -32,28 +32,10 @@ let views = 0;
 
 <script>
 
-  async function fetchViews() {
-    try {
-      const response = await fetch('http://localhost:8000/visit');
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-      let views = data.visits || 0; // Asegúrate de que 'views' esté definido
-      console.log(views)
-      document.querySelector('.views span').textContent = views;
-    } catch (error) {
-      console.error('Error fetching views:', error);
-    }
-  }
-
-  fetchViews();
-
   async function setupSearch() {
     
     const input = document.querySelector(".search-bar-input");
     const results = document.querySelector(".showResults");
-    console.log(input);
 
     // Carga el índice de posts
     const res = await fetch("/search.json");

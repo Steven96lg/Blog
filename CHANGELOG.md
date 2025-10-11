@@ -3,9 +3,13 @@
 ## [Unreleased]
 
 ### Features
+- **(2025-10-11)**: Se agrego el contador de visitas.
+  - Se agrego contador de visitas al home 
+  - Se agrego contador de visitas a cada post
 - **(2025-10-05)**: Actualizaciones recientes
   - Se elimino el aside del blog para solo mantener los post en la pagina principal.
   - Se elimino el post algoritmos en programación
+  - Se cambio el envio de conteo al servicio de Navigation a Layout.
 - **(2025-10-04)**: Documentación y seguimiento de cambios.
   - Se ha creado el archivo `CHANGELOG.md` para llevar un registro de los cambios en el proyecto.
   - Se ha añadido una descripción al archivo `README.md` para explicar el propósito del repositorio.
@@ -24,5 +28,7 @@
 - **(2025-09-07)**: Initial commit from Astro
 
 ### Proximos pasos.
+- agregar un post que hable de git
+- agregar post de docker
 
-- agregar el contador de visitas a la pagina principal
+### Notas

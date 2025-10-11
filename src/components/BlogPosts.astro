@@ -40,7 +40,7 @@ const posts = (await getCollection('posts')).sort(
 <style>
 
     .content-blog-posts .content-blog-header{
-        padding: 20px;
+        padding: 20px 0 20px 20px;
         border-radius: 10px;
         background: rgba(236, 245, 253, 0.4); 
         width: 100%;
@@ -70,6 +70,7 @@ const posts = (await getCollection('posts')).sort(
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin-top: 16px;
+        place-items: center;
     }
 
     .blog-posts .tags-date{
