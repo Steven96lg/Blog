@@ -23,7 +23,7 @@ const posts = (await getCollection('posts')).sort(
                         class="post-thumbnail"
                     />
                 </div>
-                <a href={`/post/${post.slug}`}>{post.data.title}</a>
+                <a href={`/blog/post/${post.slug}`}>{post.data.title}</a>
                 <div class="tags-date">
                     <span class="tag-post">{post.data.tag}</span>
                     <div class="date-post">
