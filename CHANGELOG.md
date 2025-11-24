@@ -3,6 +3,8 @@
 ## [Unreleased]
 
 ### Features
+
+- **(2025-11-23)**: Se elimina el articulo de MCP server.
 - **(2025-10-11)**: Se agrego el contador de visitas.
   - Se agrego contador de visitas al home 
   - Se agrego contador de visitas a cada post
