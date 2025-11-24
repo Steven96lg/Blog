@@ -4,7 +4,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://steven96lg.github.io/blog',
-  base: '/blog/',
 
   // Muy importante para GitHub Pages: generar HTML estático
   output: 'static',
