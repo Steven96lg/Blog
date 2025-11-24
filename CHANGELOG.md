@@ -3,6 +3,9 @@
 ## [Unreleased]
 
 ### Features
+- **(2025-11-23)**: release-1.0
+  - Se libera la primer version del Blog.
+  - Contiene los artilulos: [Bases de programación, Web components, Busqueda binaria, debuggear en JS]
 
 - **(2025-11-23)**: Se elimina el articulo de MCP server.
 - **(2025-10-11)**: Se agrego el contador de visitas.

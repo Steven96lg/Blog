@@ -3,6 +3,13 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://steven96lg.github.io/blog',
+
+  // Muy importante para GitHub Pages: generar HTML estático
+  output: 'static',
+
+  // Aquí SÍ va outDir (a nivel raíz, no dentro de build)
+  outDir: 'docs',
   markdown: {
     shikiConfig: {
       theme: "dracula", // otros: github-dark, material-palenight, etc.
@@ -14,4 +21,5 @@ export default defineConfig({
       sourcemap: true, // aumenta el límite de advertencia a 1600 kB
     },
   },
+  
 });
