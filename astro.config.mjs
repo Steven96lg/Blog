@@ -17,6 +17,9 @@ export default defineConfig({
       wrap: true, // envuelve las líneas largas
     },
   },
+  build: {
+    assets: 'assets', // Cambiar de '_astro' a 'assets' (GitHub Pages ignora carpetas con '_')
+  },
   vite: {
     build: {
       sourcemap: true, // aumenta el límite de advertencia a 1600 kB
