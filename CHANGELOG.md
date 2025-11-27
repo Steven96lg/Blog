@@ -3,6 +3,11 @@
 ## [Unreleased]
 
 ### Features
+
+- **(2025-11-27)**: bugFix se muestra el responsivo de manera correcta
+  - Se agrego el responsivo de manera correcta
+  - Contiene los artilulos: [Bases de programación, Web components, Busqueda binaria, debuggear en JS]
+
 - **(2025-11-23)**: release-1.0
   - Se libera la primer version del Blog.
   - Contiene los artilulos: [Bases de programación, Web components, Busqueda binaria, debuggear en JS]
