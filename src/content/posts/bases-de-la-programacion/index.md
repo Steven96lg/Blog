@@ -1,6 +1,6 @@
 ---
 title: 'La importancia de las bases en programación 🧩'
-pubDate: 2025-09-08
+pubDate: 2025-11-01
 description: '¿Qué tanta importancia le das a tus bases en programación? 💻 En estos tiempos de IA 🤖 y Vibe Coding, tus fundamentos importan más que nunca. Por eso, en este artículo quiero compartirte mi opinión sobre el tema.'
 tag: "Fundamentos" 
 image: './fundamentos-de-programacion.png'

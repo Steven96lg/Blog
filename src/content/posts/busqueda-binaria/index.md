@@ -1,6 +1,6 @@
 ---
 title: 'Algoritmo de búsqueda binaria 🔍0️⃣1️⃣'
-pubDate: 2025-09-07
+pubDate: 2025-11-08
 description: '¿Sabes qué es la búsqueda binaria? 🔍 Es uno de los algoritmos más eficientes para encontrar elementos en listas ordenadas. Hoy te explico paso a paso cómo funciona y lo implementamos en JavaScript con un ejemplo práctico.'
 tag: "Algoritmos"
 image: './busqueda-binaria.png'

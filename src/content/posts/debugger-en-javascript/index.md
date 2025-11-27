@@ -1,6 +1,6 @@
 ---
 title: 'Vamos a debuggear en JavaScript 🐞🐛'
-pubDate: 2025-09-07
+pubDate: 2025-11-07
 description: '¿Alguna vez te has quedado atorado con un error que no sabes de dónde viene? 🐛 En JavaScript, el debugger es una de las herramientas más poderosas para entender qué pasa dentro de tu código. Hoy quiero mostrarte cómo usarlo para detectar y resolver errores como todo un pro.'
 tag: "JavaScript"
 image: './debugger-en-javascript.png'

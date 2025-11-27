@@ -11,6 +11,10 @@ export default defineConfig({
 
   // Aquí SÍ va outDir (a nivel raíz, no dentro de build)
   outDir: 'docs',
+    build: {
+      // Evita que Astro genere la carpeta `_astro` que GitHub Pages no sirve
+      assets: 'assets', // This line is now correctly placed
+  },
   markdown: {
     shikiConfig: {
       theme: "dracula", // otros: github-dark, material-palenight, etc.

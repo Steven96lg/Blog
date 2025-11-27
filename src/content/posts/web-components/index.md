@@ -1,6 +1,6 @@
 ---
 title: 'Web Components con Lit ⚡'
-pubDate: 2025-09-08
+pubDate: 2025-11-07
 description: 'Los Web Components nos permiten crear piezas reutilizables de código nativo en JavaScript sin depender de un framework. Hoy quiero contarte qué son, sus ventajas y desventajas, y cómo usarlos con Lit para construir componentes modernos y mantenibles.'
 tag: "JavaScript" 
 image: './web-components.png'
