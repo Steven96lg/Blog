@@ -3,10 +3,16 @@ let views = 0;
 ---
 
 <nav>
-	<div class="logo">
-        <a href="/blog/" class="home-redirect"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="48" viewBox="0 0 24 24"><g fill="none" stroke="#333333" stroke-width="2"><path d="M5 12.76c0-1.358 0-2.037.274-2.634c.275-.597.79-1.038 1.821-1.922l1-.857C9.96 5.75 10.89 4.95 12 4.95s2.041.799 3.905 2.396l1 .857c1.03.884 1.546 1.325 1.82 1.922c.275.597.275 1.276.275 2.634V17c0 1.886 0 2.828-.586 3.414S16.886 21 15 21H9c-1.886 0-2.828 0-3.414-.586S5 18.886 5 17z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14.5 21v-5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v5"/></g></svg></a>
-    </div>
+	
 	<div class="center-nav">
+        <div class="nav-icons">
+            <a href="/blog/" class="nav-icon" title="Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><g fill="none" stroke="#333333" stroke-width="2"><path d="M5 12.76c0-1.358 0-2.037.274-2.634c.275-.597.79-1.038 1.821-1.922l1-.857C9.96 5.75 10.89 4.95 12 4.95s2.041.799 3.905 2.396l1 .857c1.03.884 1.546 1.325 1.82 1.922c.275.597.275 1.276.275 2.634V17c0 1.886 0 2.828-.586 3.414S16.886 21 15 21H9c-1.886 0-2.828 0-3.414-.586S5 18.886 5 17z"/><path stroke-linecap="round" stroke-linejoin="round" d="M14.5 21v-5a1 1 0 0 0-1-1h-3a1 1 0 0 0-1 1v5"/></g></svg>
+            </a>
+            <a href="/blog/ciberseguridad" class="nav-icon" title="Ciberseguridad">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#333333" d="M18.918 17.48c-.126 2.727-2.384 4.696-5.364 4.696H7.34v-6.123l-2.185-.957V24h8.381c4.334 0 7.549-2.962 7.549-6.881v-.163c-.65.235-1.372.415-2.167.524m1.355-9.501C18.611 4.313 17.726.989 15.432.213c-1.336-.452-2.005-.091-2.637.217a.306.306 0 0 0-.072.505c.361.307.813.687 1.336 1.174c-1.95-1.138-7.333-2.835-7.874-.776c-.488 1.86-1.319 4.587-1.319 4.587S.603 5.487.116 7.293s3.323 5.274 9.627 7.134c6.303 1.861 11.198 1.373 13.311-.921s.072-5.473-2.781-5.527m-1.247.036c-.487.47-2.077 1.68-5.563 1.427c-3.738-.271-6.809-2.474-7.604-3.088a.34.34 0 0 1-.126-.398c.054-.18.126-.469.253-.849c.072-.234.343-.343.542-.216c1.571.903 4.1 2.221 6.791 2.402c2.402.163 3.847-.542 4.786-1.066a.39.39 0 0 1 .542.199l.47 1.156c.036.162.018.325-.091.433"/></svg>
+            </a>
+        </div>
         <div class="search-bar">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#000000" fill-rule="evenodd" d="M18.319 14.433A8.001 8.001 0 0 0 6.343 3.868a8 8 0 0 0 10.564 11.976l.043.045l4.242 4.243a1 1 0 1 0 1.415-1.415l-4.243-4.242zm-2.076-9.15a6 6 0 1 1-8.485 8.485a6 6 0 0 1 8.485-8.485" clip-rule="evenodd"/></svg>
             <input type="text" class="search-bar-input" placeholder="Buscar" />
@@ -75,7 +81,7 @@ let views = 0;
   -webkit-backdrop-filter: blur(8px); /* soporte Safari */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: space-between;
   font-family: "Archivo Narrow", serif;
@@ -112,6 +118,52 @@ nav .center-nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+
+nav .nav-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+nav .nav-icon {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+nav .nav-icon:hover {
+  background-color: rgba(44, 146, 172, 0.1);
+  transform: scale(1.1);
+}
+
+nav .nav-icon::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.7s ease;
+  z-index: 1001;
+}
+
+nav .nav-icon:hover::after {
+  opacity: 1;
 }
 
 nav .center-nav .search-bar {
@@ -205,6 +257,9 @@ nav .theme-lang  .social-media {
       width: 80px;
       font-weight: 500;
       color: rgb(104, 104, 104);
+    }
+    nav .nav-icons {
+      display: none;
     }
     nav .theme-lang  .social-media {
         display: flex;

@@ -7,10 +7,21 @@ const postCollections = defineCollection({
         pubDate: z.date(),
         description: z.string(),
         tag: z.string(),
-        image: image(),
+        image: image().optional(),
+    })
+})
+
+const ciberseguridadCollections = defineCollection({
+    schema: ({ image }) => z.object({
+        title: z.string(),
+        pubDate: z.date(),
+        description: z.string(),
+        tag: z.string(),
+        image: image().optional(),
     })
 })
 
 export const collections = {
-    'posts': postCollections
+    'posts': postCollections,
+    'ciberseguridad': ciberseguridadCollections
 };
